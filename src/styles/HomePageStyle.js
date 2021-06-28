@@ -7,4 +7,8 @@ export const List = styled.ul`
 
 export const Line = styled.li`
   line-height: 30px;
+
+  a {
+    color: ${(props) => props.theme.text};
+  }
 `;

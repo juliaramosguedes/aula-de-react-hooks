@@ -1,11 +1,25 @@
 import { createGlobalStyle } from "styled-components";
 
+export const themes = {
+  dark: {
+    background: "#272823",
+    title: "#6495ed",
+    text: "#ffffff",
+  },
+  light: {
+    background: "#ffffff",
+    title: "limegreen",
+    text: "#000000",
+  },
+};
+
 export default createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     outline: 0;
     box-sizing: border-box;
+    background-color: ${(props) => props.theme.background};
   }
 
   body {

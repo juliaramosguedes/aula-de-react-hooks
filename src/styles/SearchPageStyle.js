@@ -40,7 +40,7 @@ export const Card = styled.div`
 `;
 
 export const CardImage = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.background};
   border-radius: 8px 8px 0 0;
   display: flex;
   align-items: center;
@@ -54,4 +54,9 @@ export const Image = styled.img`
 export const CardBody = styled.div`
   padding: 24px;
   background-color: limegreen;
+  * {
+    background-color: transparent;
+    color: ${(props) => props.theme.background};
+  }
+  
 `;

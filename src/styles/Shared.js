@@ -2,8 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.section`
   max-width: 800px;
-  margin: 100px auto;
-  min-height: 100vh;
+  margin: 0 auto 60px;
+  min-height: calc(100vh - 150px);
 `
 
 export const Wrap = styled.div`
@@ -12,6 +12,9 @@ export const Wrap = styled.div`
 `;
 
 export const Title = styled.h1`
-  color: gray;
+  color: ${(props) => props.theme.title};
   text-align: center;
+  a {
+    color: ${(props) => props.theme.text};
+  }
 `;
