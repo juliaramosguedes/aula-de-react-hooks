@@ -1,15 +1,15 @@
 import { BrowserRouter } from "react-router-dom";
 import Routes from "./routes";
-import GlobalStyle from "./styles/global-style";
-import { ThemeStore } from "./contexts/ThemeStore";
+import { AuthProvider, ThemeProvider } from "./contexts";
 
 const App = () => (
-  <ThemeStore>
-    <BrowserRouter>
-      <Routes />
-    </BrowserRouter>
-    <GlobalStyle />
-  </ThemeStore>
+  <ThemeProvider>
+    <AuthProvider>
+      <BrowserRouter>
+        <Routes />
+      </BrowserRouter>
+    </AuthProvider>
+  </ThemeProvider>
 );
 
 export default App;
