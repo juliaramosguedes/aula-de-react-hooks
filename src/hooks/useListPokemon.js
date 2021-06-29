@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { listPokemon } from "../api/pokemon";
+import { listPokemon } from "../services";
 import _ from "lodash";
 
 const parsePokemon = (pokemon) => {
@@ -8,7 +8,6 @@ const parsePokemon = (pokemon) => {
     url
   } = pokemon;
   const id = url.replace("https://pokeapi.co/api/v2/pokemon/", "").match(/\d+/);
-  console.log(id);
   return {
     id,
     name: _.startCase(name),

@@ -2,13 +2,13 @@ import {
   Container,
   Title,
   Wrap,
-} from "../styles/Shared";
+} from "../../styles/shared";
 import {
   Line,
   List
-} from "../styles/HomePageStyle";
-import useListPokemon from "../hooks/useListPokemon";
-import { Layout } from "../components";
+} from "./style";
+import { useListPokemon } from "../../hooks";
+import { Layout } from "../../components";
 
 const HomePage = () => {
   const { loading, error, pokemonList } = useListPokemon(150);
@@ -23,8 +23,8 @@ const HomePage = () => {
         {!loading && error && <h3>Something went wrong. Try again later.</h3>}
         {!loading && pokemonList && (
           <List>
-            {pokemonList.map(({ id, name }) => (
-              <Line><a href={`/pokemon/${id}`}><b>{id}</b> {name}</a></Line>
+            {pokemonList.map(({ id, name }, index) => (
+              <Line key={`pokemon-${index}`}><a href={`/pokemon/${id}`}><b>{id}</b> {name}</a></Line>
             ))}
           </List>
         )}

@@ -4,19 +4,16 @@ import {
   Card,
   CardBody,
   CardImage,
-  Image,
-} from "../styles/SearchPageStyle";
-import {
   Container,
+  Image,
   Title,
   Wrap,
-} from "../styles/Shared";
-import { Layout } from "../components";
-import useGetPokemon from "../hooks/useGetPokemon";
+} from "../../styles/shared";
+import { Layout } from "../../components";
+import { useGetPokemon } from "../../hooks";
 
 const PokemonPage = () => {
-  let { id } = useParams();
-
+  const { id } = useParams();
   const { loading, error, pokemon } = useGetPokemon(id);
 
   return (

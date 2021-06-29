@@ -1,3 +1,4 @@
-export { default as HomePage } from "./HomePage";
-export { default as PokemonPage } from "./PokemonPage";
-export { default as SearchPage } from "./SearchPage";
+export { default as HomePage } from "./home";
+export { default as PokemonPage } from "./pokemon";
+export { default as ProtectedAreaPage } from "./protected-area";
+export { default as SearchPage } from "./search";

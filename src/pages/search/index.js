@@ -3,21 +3,21 @@ import { useFormik } from "formik";
 
 import {
   Button,
+  Error,
+  Form,
+  Input,
+} from "./style";
+import {
   Card,
   CardBody,
   CardImage,
-  Error,
-  Form,
-  Image,
-  Input,
-} from "../styles/SearchPageStyle";
-import {
   Container,
+  Image,
   Title,
   Wrap,
-} from "../styles/Shared";
-import { Layout } from "../components";
-import useGetPokemon from "../hooks/useGetPokemon";
+} from "../../styles/shared";
+import { Layout } from "../../components";
+import { useGetPokemon } from "../../hooks";
 
 const SearchPage = () => {
   const [searchInput, setSearchInput] = useState(null);
@@ -70,7 +70,6 @@ const SearchPage = () => {
             </Card>
           </Wrap>
         )}
-        <Title>See the complete list. <a href="/">Click here</a>.</Title>
       </Container>
     </Layout>
   )
