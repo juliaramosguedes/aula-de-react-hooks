@@ -1,5 +1,5 @@
 import { Route, Switch } from "react-router-dom";
-import { HomePage, PokemonPage, ProtectedAreaPage, SearchPage } from "../pages";
+import { HomePage, PokemonPage, ProtectedAreaPage, SearchPage } from "@/pages";
 import GuardedRoute from "./guarded-route";
 
 const Routes = () => (

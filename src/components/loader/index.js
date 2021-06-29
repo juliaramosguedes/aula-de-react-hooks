@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Container, StyledLoader } from "./style";
-import Layout from "../layout";
+import Layout from "@/components/layout";
 
 const Loader = () => (
   <Layout>

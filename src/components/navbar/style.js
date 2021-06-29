@@ -1,5 +1,5 @@
 import styled, { css } from "styled-components";
-import { Sun, Moon } from "styled-icons/feather";
+import { Sun, Moon } from "@styled-icons/feather";
 import { NavLink } from "react-router-dom";
 
 export const Nav = styled.nav`

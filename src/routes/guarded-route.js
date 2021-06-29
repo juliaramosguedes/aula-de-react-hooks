@@ -1,6 +1,6 @@
 import { Route, Redirect } from "react-router-dom";
-import { useAuth } from "../contexts";
-import { Loader } from "../components";
+import { useAuth } from "@/contexts";
+import { Loader } from "@/components";
 
 const GuardedRoute = ({ component: Component, ...rest }) => {
   const { signed, loading } = useAuth();

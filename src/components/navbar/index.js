@@ -2,7 +2,7 @@ import React from "react";
 
 
 import { AuthButton, ListItem, Nav, StyledMoon, StyledSun } from "./style";
-import { useTheme, useAuth } from "../../contexts";
+import { useTheme, useAuth } from "@/contexts";
 
 const Navbar = () => {
   const { theme, switchTheme } = useTheme();

@@ -2,13 +2,14 @@ import {
   Container,
   Title,
   Wrap,
-} from "../../styles/shared";
+} from "@/styles/shared";
 import {
   Line,
   List
 } from "./style";
-import { useListPokemon } from "../../hooks";
-import { Layout } from "../../components";
+import { useListPokemon } from "@/hooks";
+import { Layout } from "@/components";
+import { Link } from "react-router-dom";
 
 const HomePage = () => {
   const { loading, error, pokemonList } = useListPokemon(150);
@@ -24,7 +25,7 @@ const HomePage = () => {
         {!loading && pokemonList && (
           <List>
             {pokemonList.map(({ id, name }, index) => (
-              <Line key={`pokemon-${index}`}><a href={`/pokemon/${id}`}><b>{id}</b> {name}</a></Line>
+              <Line key={`pokemon-${index}`}><Link to={`/pokemon/${id}`}><b>{id}</b> {name}</Link></Line>
             ))}
           </List>
         )}

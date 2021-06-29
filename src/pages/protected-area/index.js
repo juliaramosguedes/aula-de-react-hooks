@@ -1,8 +1,8 @@
 import { Redirect } from "react-router-dom";
 
-import { Layout } from "../../components";
-import { Title } from "../../styles/shared";
-import { useAuth } from "../../contexts";
+import { Layout } from "@/components";
+import { Title } from "@/styles/shared";
+import { useAuth } from "@/contexts";
 
 const ProtectedArea = () => {
   const { signed } = useAuth();

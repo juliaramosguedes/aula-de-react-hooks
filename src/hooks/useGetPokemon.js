@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { getPokemon } from "../services";
+import { getPokemon } from "@/services";
 import _ from "lodash";
 
 const parsePokemon = (pokemon) => {

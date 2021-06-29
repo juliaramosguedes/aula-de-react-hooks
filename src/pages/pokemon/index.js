@@ -8,9 +8,9 @@ import {
   Image,
   Title,
   Wrap,
-} from "../../styles/shared";
-import { Layout } from "../../components";
-import { useGetPokemon } from "../../hooks";
+} from "@/styles/shared";
+import { Layout } from "@/components";
+import { useGetPokemon } from "@/hooks";
 
 const PokemonPage = () => {
   const { id } = useParams();
