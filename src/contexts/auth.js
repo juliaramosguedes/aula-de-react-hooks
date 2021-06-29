@@ -1,4 +1,5 @@
 import { createContext, useState, useEffect, useContext } from "react";
+
 import { api, auth } from "../services";
 
 const AuthContext = createContext({});
@@ -16,7 +17,7 @@ export const AuthProvider = ({ children }) => {
       api.defaults.headers.Authorization = `Bearer ${storagedToken}`;
     }
 
-    setLoading(false);
+    setTimeout(() => setLoading(false), 1000);
   }, []);
 
   const signIn = async () => {

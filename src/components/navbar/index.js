@@ -1,5 +1,6 @@
 import React from "react";
 
+
 import { AuthButton, ListItem, Nav, StyledMoon, StyledSun } from "./style";
 import { useTheme, useAuth } from "../../contexts";
 
@@ -9,17 +10,17 @@ const Navbar = () => {
 
   return (
     <Nav>
-      <ul>
-        <ListItem><a href="/">Home</a></ListItem>
-        <ListItem><a href="/capture">Capture</a></ListItem>
-      </ul>
       <div>
+        <ListItem exact to="/" activeStyle={{ fontWeight: "bold" }}>Home</ListItem>
+        <ListItem exact to="/capture" activeStyle={{ fontWeight: "bold" }}>Capture</ListItem>
+      </div>
+      <div>
+        <AuthButton onClick={signed ? signOut : signIn}>Sign {signed ? "Out" : "In"}</AuthButton>
         {theme === "dark" ? (
           <StyledSun size={32} onClick={() => switchTheme("light")} />
         ) : (
           <StyledMoon size={32} onClick={() => switchTheme("dark")} />
         )}
-        <AuthButton onClick={signed ? signOut : signIn}>Sign {signed ? "Out" : "In"}</AuthButton>
       </div>
     </Nav>
   );
