@@ -6,16 +6,16 @@ const GuardedRoute = ({ component: Component, ...rest }) => {
   const { signed, loading } = useAuth();
 
   if (loading) {
-    return <Loader size={64}/>
+    return <Loader size={64}/>;
   }
 
   return (
     <Route {...rest} render={(props) => (
       signed
         ? <Component {...props} />
-        : <Redirect to='/protected' />
-    )} />
-  )
-}
+        : <Redirect to='/protected'/>
+    )}/>
+  );
+};
 
 export default GuardedRoute;

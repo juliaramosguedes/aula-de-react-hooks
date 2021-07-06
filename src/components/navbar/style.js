@@ -29,7 +29,7 @@ export const ListItem = styled(NavLink)`
   & + a {
     margin-left: 16px;
   }
-  
+
   color: ${(props) => props.theme.title};
 `;
 
@@ -38,4 +38,4 @@ export const AuthButton = styled.button`
   background-color: transparent;
   text-decoration: underline;
   color: ${(props) => props.theme.title};
-`
+`;

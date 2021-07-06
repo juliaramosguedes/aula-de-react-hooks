@@ -4,10 +4,10 @@ import GuardedRoute from "./guarded-route";
 
 const Routes = () => (
   <Switch>
-    <Route exact path="/" component={HomePage} />
-    <Route path="/pokemon/:id" component={PokemonPage} />
-    <Route path="/protected" component={ProtectedAreaPage} />
-    <GuardedRoute path="/capture" component={SearchPage} />
+    <Route exact path="/" component={HomePage}/>
+    <Route path="/pokemon/:id" component={PokemonPage}/>
+    <Route path="/protected" component={ProtectedAreaPage}/>
+    <GuardedRoute path="/capture" component={SearchPage}/>
   </Switch>
 );
 

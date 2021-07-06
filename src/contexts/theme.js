@@ -11,14 +11,14 @@ export const ThemeProvider = ({ children }) => {
   });
 
   const switchTheme = (theme) => {
-    localStorage.setItem("theme", theme)
+    localStorage.setItem("theme", theme);
     setTheme(theme);
-  }
+  };
 
   return (
     <ThemeContext.Provider value={{ switchTheme, theme }}>
       <ThemeProviderStyle theme={themes[theme]}>
-        <GlobalStyle />
+        <GlobalStyle/>
         {children}
       </ThemeProviderStyle>
     </ThemeContext.Provider>

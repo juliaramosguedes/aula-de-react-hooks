@@ -8,7 +8,7 @@ const ProtectedArea = () => {
   const { signed } = useAuth();
 
   if (signed) {
-    return (<Redirect to="/capture" />)
+    return (<Redirect to="/capture"/>);
   }
 
   return (
@@ -16,6 +16,6 @@ const ProtectedArea = () => {
       <Title>Please, sign in to get access to this page.</Title>
     </Layout>
   );
-}
+};
 
 export default ProtectedArea;

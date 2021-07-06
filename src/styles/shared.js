@@ -5,7 +5,7 @@ export const Container = styled.section`
   margin: 0 auto;
   padding: 30px;
   min-height: calc(100vh - 150px);
-`
+`;
 
 export const Wrap = styled.div`
   max-width: 300px;
@@ -15,6 +15,7 @@ export const Wrap = styled.div`
 export const Title = styled.h1`
   color: ${(props) => props.theme.title};
   text-align: center;
+
   a {
     color: ${(props) => props.theme.text};
   }
@@ -44,7 +45,7 @@ export const Image = styled.img`
 export const CardBody = styled.div`
   padding: 24px;
   background-color: limegreen;
-  
+
   * {
     background-color: transparent;
     color: ${(props) => props.theme.background};

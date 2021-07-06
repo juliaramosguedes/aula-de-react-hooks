@@ -36,7 +36,7 @@ const useGetPokemon = (nameOrId) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if(nameOrId) {
+    if (nameOrId) {
       getPokemon(nameOrId).then((result) => {
         const parsedPokemon = parsePokemon(result);
         setError(null);
@@ -46,11 +46,11 @@ const useGetPokemon = (nameOrId) => {
         setLoading(false);
         setPokemon(null);
         setError(error.message);
-      })
+      });
     }
   }, [nameOrId]);
 
   return { loading, error, pokemon };
-}
+};
 
 export default useGetPokemon;

@@ -6,7 +6,7 @@ const App = () => (
   <ThemeProvider>
     <AuthProvider>
       <BrowserRouter>
-        <Routes />
+        <Routes/>
       </BrowserRouter>
     </AuthProvider>
   </ThemeProvider>

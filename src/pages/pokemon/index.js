@@ -35,7 +35,7 @@ const PokemonPage = () => {
                 <p>Type: {pokemon.type}</p>
                 <span>Abilities: </span>
                 <ul>{pokemon.abilities.map(
-                  (ability, index) => (<li key={"ability " + index}>{ability}</li>)
+                  (ability, index) => (<li key={"ability " + index}>{ability}</li>),
                 )}</ul>
               </CardBody>
             </Card>
@@ -43,7 +43,7 @@ const PokemonPage = () => {
         )}
       </Container>
     </Layout>
-)
+  );
 };
 
 export default PokemonPage;

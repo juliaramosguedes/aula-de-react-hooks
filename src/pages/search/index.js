@@ -22,13 +22,13 @@ import { useGetPokemon } from "@/hooks";
 const SearchPage = () => {
   const [searchInput, setSearchInput] = useState(null);
   const formik = useFormik({
-      initialValues: {
-        pokemon: "",
-      },
-      onSubmit: (values) => {
-        setSearchInput(values.pokemon.toLowerCase());
-      }
-    });
+    initialValues: {
+      pokemon: "",
+    },
+    onSubmit: (values) => {
+      setSearchInput(values.pokemon.toLowerCase());
+    },
+  });
 
   const { loading, error, pokemon } = useGetPokemon(searchInput);
 
@@ -64,7 +64,7 @@ const SearchPage = () => {
                 <p>Type: {pokemon.type}</p>
                 <span>Abilities: </span>
                 <ul>{pokemon.abilities.map(
-                  (ability, index) => (<li key={"ability " + index}>{ability}</li>)
+                  (ability, index) => (<li key={"ability " + index}>{ability}</li>),
                 )}</ul>
               </CardBody>
             </Card>
@@ -72,7 +72,7 @@ const SearchPage = () => {
         )}
       </Container>
     </Layout>
-  )
+  );
 };
 
 export default SearchPage;

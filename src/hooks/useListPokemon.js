@@ -1,11 +1,12 @@
 import { useState, useEffect } from "react";
-import { listPokemon } from "@/services";
 import _ from "lodash";
+
+import { listPokemon } from "@/services";
 
 const parsePokemon = (pokemon) => {
   const {
     name,
-    url
+    url,
   } = pokemon;
   const id = url.replace("https://pokeapi.co/api/v2/pokemon/", "").match(/\d+/);
   return {
@@ -20,7 +21,7 @@ const useListPokemon = (quantity) => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    if(quantity) {
+    if (quantity) {
       listPokemon(quantity).then((result) => {
         const parsedPokemonList = result.map((item) => parsePokemon(item));
         setError(null);
@@ -30,11 +31,11 @@ const useListPokemon = (quantity) => {
         setLoading(false);
         setPokemonList(null);
         setError(error.message);
-      })
+      });
     }
   }, [quantity]);
 
   return { loading, error, pokemonList };
-}
+};
 
 export default useListPokemon;

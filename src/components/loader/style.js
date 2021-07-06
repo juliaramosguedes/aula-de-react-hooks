@@ -36,11 +36,11 @@ export const StyledLoader = styled(Loader)`
   -ms-animation: rotating 3s linear infinite;
   -o-animation: rotating 3s linear infinite;
   animation: rotating 3s linear infinite;
-`
+`;
 
 export const Container = styled.div`
   min-height: calc(100vh - 150px);
   display: flex;
   align-items: center;
   justify-content: center;
-`
+`;

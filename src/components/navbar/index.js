@@ -17,9 +17,9 @@ const Navbar = () => {
       <div>
         <AuthButton onClick={signed ? signOut : signIn}>Sign {signed ? "Out" : "In"}</AuthButton>
         {theme === "dark" ? (
-          <StyledSun size={32} onClick={() => switchTheme("light")} />
+          <StyledSun size={32} onClick={() => switchTheme("light")}/>
         ) : (
-          <StyledMoon size={32} onClick={() => switchTheme("dark")} />
+          <StyledMoon size={32} onClick={() => switchTheme("dark")}/>
         )}
       </div>
     </Nav>

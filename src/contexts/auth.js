@@ -28,6 +28,7 @@ export const AuthProvider = ({ children }) => {
 
     localStorage.setItem("user", JSON.stringify(response?.user));
     localStorage.setItem("token", response?.token);
+    setTimeout(() => setLoading(false), 1000);
   };
 
   const signOut = () => {

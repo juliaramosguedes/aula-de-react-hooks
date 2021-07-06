@@ -5,7 +5,7 @@ import {
 } from "@/styles/shared";
 import {
   Line,
-  List
+  List,
 } from "./style";
 import { useListPokemon } from "@/hooks";
 import { Layout } from "@/components";
@@ -31,7 +31,7 @@ const HomePage = () => {
         )}
       </Container>
     </Layout>
-  )
+  );
 };
 
 export default HomePage;

@@ -2,9 +2,9 @@ import * as React from "react";
 
 import Navbar from "@/components/navbar";
 
-const Layout = ({children}) => (
+const Layout = ({ children }) => (
   <>
-    <Navbar />
+    <Navbar/>
     {children}
   </>
 );
